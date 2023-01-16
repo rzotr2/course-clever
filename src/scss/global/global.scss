@@ -1,0 +1,108 @@
+body {
+  font-family: 'Montserrat', sans-serif;;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+  line-height: 22px;
+
+  background: $main-color;
+  border-radius: 5px;
+
+  padding: 15px 40px;
+}
+
+.btn-outline {
+  color: $main-color;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+  line-height: 22px;
+
+  background: inherit;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+
+  padding: 15px 40px;
+}
+
+.title {
+  font-size: 3.625rem;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: $white-color;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: $main-color;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: $white-color;
+}
+
+.red-line__thin {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: $item-background-color;
+}
+
+.red-line__plump {
+  display: inline-block;
+
+  width: 94px;
+  height: 7px;
+
+  background-color: $item-background-color;
+}
+
+.sale-badge {
+  color: $white-color;
+  font-size: 0.875rem;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  padding: 5px 10px;
+
+  background-color: $item-background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.info-icon {
+  color: $white-color;
+  font-size: 2em;
+
+  background-color: $item-background-color;
+  padding: 22px 19px;
+
+  border-radius: 10px;
+}
+
+.image-icon {
+  color: $image-icon-color;
+  font-size: 1.5em;
+
+  background-color: $white-color;
+  padding: 12px 11px;
+
+  border-radius: 45px;
+}
