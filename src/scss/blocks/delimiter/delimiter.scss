@@ -1,0 +1,10 @@
+@import 'modifiers';
+
+.delimiter {
+  display: inline-block;
+
+  background-color: $item-background-color;
+
+  &--thin {@include delimiter-thin;}
+  &--plump {@include delimiter-plump;}
+}
