@@ -1,14 +1,14 @@
 
 
 .link-primary {
-  color: #23A6F0;
-  font-size: 14px;
+  color: $link-color;
+  font-size: 0.875rem;
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 0.2px;
 
-  padding: 10px 20px;
-  border: 1px solid #23A6F0;
+  padding: 0.714em 1.42em;
+  border: 1px solid $link-color;
   border-radius: 37px;
   text-align: center;
 
