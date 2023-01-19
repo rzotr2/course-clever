@@ -1,0 +1,29 @@
+@import 'modifiers';
+
+.btn {
+  padding: 1.25em 3.25em;
+  box-sizing: border-box;
+
+  color: $black-color;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+  line-height: 22px;
+
+  background: $white-color;
+  border-radius: 5px;
+  transition: all .2s linear;
+
+  &:hover, &:focus {
+    color: $white-color;
+
+    background: lighten($black-color, 10%);
+  }
+
+  &:active {
+    background: lighten($black-color, 5%);
+  }
+
+  &--primary {@include btn-primary;}
+  &--primary-outline {@include btn-primary-outline;}
+}

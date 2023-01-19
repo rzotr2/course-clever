@@ -1,0 +1,31 @@
+@mixin btn-primary {
+  color: $white-color;
+
+  background: $main-color;
+
+  &:hover, &:focus {
+    background: darken($main-color, 10%);
+  }
+
+  &:active {
+    background: darken($main-color, 5%);
+  }
+}
+
+@mixin btn-primary-outline {
+  padding: 1.15em 3.15em;
+
+  color: $main-color;
+
+  border: 0.1em solid $main-color;
+
+  &:hover, &:focus {
+    color: $white-color;
+
+    background: lighten($main-color, 10%);
+  }
+
+  &:active {
+    background: lighten($main-color, 15%);
+  }
+}
