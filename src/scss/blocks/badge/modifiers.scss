@@ -4,8 +4,15 @@
 }
 
 @mixin badge-rate {
-  background-color: #252B42;
+  display: inline-block;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  padding: 3px 10px;
+
+  background-color: $image-icon-color;
   border-radius: 20px;
 
-  padding: 5px;
+
 }
