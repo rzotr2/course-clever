@@ -1,0 +1,17 @@
+@import 'modifiers';
+
+.badge {
+  padding: 5px 10px;
+
+  background-color: $black-color;
+  border-radius: 3px;
+
+  color: $white-color;
+  font-size: 0.875rem;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  &--default {@include badge-default;}
+  &--rate {@include badge-rate;}
+}
