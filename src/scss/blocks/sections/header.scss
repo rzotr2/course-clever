@@ -1,0 +1,55 @@
+.header__inner {
+  display: flex;
+  align-items: center;
+
+  height: 100px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &--primary {
+      .header-nav__item {
+        &:not(:last-child) {
+          margin-right: 1.2rem;
+        }
+      }
+    }
+
+    &--secondary {
+      .header-nav__item {
+        &:not(:last-child) {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $white-color;
+    font-weight: 700;
+
+    &--brand-name {
+      margin-right: 4rem;
+      font-size: 1.5rem;
+      line-height: 32px;
+      letter-spacing: 0.1px;
+  }
+  }
+}
+
+.header {
+  &__btn {
+    > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -6,4 +6,10 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: $white-color;
+  background-color: $backgorund-color;
+}
+
+.container {
+  max-width: 966px;
+  margin: 0 auto;
 }
