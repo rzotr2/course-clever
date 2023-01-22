@@ -1,30 +1,65 @@
-const renderHeaderNav = (
-    mobileNavLists,
-    mobileHeader,
-    navGroup,
-    headerNav,
-) => {
-    if(window.innerWidth < 992) {
-        Array.from(mobileNavLists).forEach(navList => {
-            mobileHeader.append(navList);
-        });
-    } else {
-        navGroup.append(mobileNavLists.item(0));
-        headerNav.append(mobileNavLists.item(1));
+class App {
+    constructor(sizingService) {
+        this.sizingService = sizingService;
+        this.header = new Header(sizingService);
     }
-};
+}
 
-(() => {
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileHeader = document.querySelector('#js-header-mobile');
-        const mobileNavLists = document.querySelectorAll('.js-header-nav-list');
-        const navGroup = document.querySelector('#js-header-nav-group');
-        const headerNav = document.querySelector('#header-nav');
+class SizingService {
+    mobileBreakpoint = 992;
 
-        renderHeaderNav(mobileNavLists, mobileHeader, navGroup, headerNav);
+    get currentSize() {
+        return window.innerWidth < this.mobileBreakpoint ? 'mobile' : 'desktop';
+    }
+}
 
-        window.addEventListener("resize", (event) => {
-            renderHeaderNav(mobileNavLists, mobileHeader, navGroup, headerNav);
+class Header {
+    mobileHeader$ = document.querySelector('#js-header-mobile');
+    desktopHeader$ = document.querySelector('#js-header-nav');
+    navGroup$ = document.querySelector('#js-header-nav-group');
+    navLists$ = document.querySelectorAll('.js-header-nav-list');
+
+    #sizingService;
+
+    constructor(sizingService) {
+        this.#sizingService = sizingService;
+
+        this.setupRenderer();
+    }
+
+    setupRenderer() {
+        this.#renderNav();
+
+        window.addEventListener('resize', () => {
+            this.#renderNav();
         });
+    }
+
+    #renderNav() {
+        const currentSize = this.#sizingService.currentSize;
+        const currentNavListContainer$ = this.#findCurrentNavListContainer();
+
+        if (currentSize === "mobile" && currentNavListContainer$ === "desktop") {
+            Array.from(this.navLists$).forEach(navList => {
+                this.mobileHeader$.append(navList);
+            });
+        }
+
+        if (currentSize === "desktop" && currentNavListContainer$ === "mobile") {
+            this.navGroup$.append(this.navLists$.item(0));
+            this.desktopHeader$.append(this.navLists$.item(1));
+        }
+    }
+
+    #findCurrentNavListContainer() {
+        return this.desktopHeader$.contains(this.navLists$.item(0)) ? 'desktop' : 'mobile';
+    }
+}
+
+((window, document) => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const app = new App(
+            new SizingService(),
+        );
     });
-})();
+})(window, document);
