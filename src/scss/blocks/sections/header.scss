@@ -1,5 +1,6 @@
 .header__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   height: 100px;
@@ -11,9 +12,36 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @include mobile-screen {
+    .header-nav__list {
+      display: none;
+    }
+
+    &__group {
+      width: 100%;
+      justify-content: space-between;
+
+      button.header__burger {
+        display: block;
+      }
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    .header__burger {
+      display: none;
+      padding: 0.35em 0.714em;
+      font-size: 2em;
+    }
+  }
+
   width: 100%;
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     &--primary {

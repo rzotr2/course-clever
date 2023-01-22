@@ -7,41 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/index.css">
+    <script src="src/js/index.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <nav class="header-nav">
-                    <ul class="header-nav__list header-nav__list--primary">
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link header-nav__link--brand-name">BrandName</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Home</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Product</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Pricing</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="header-nav__list header-nav__list--secondary">
+                <nav id="header-nav" class="header-nav">
+                    <div id="js-header-nav-group" class="header-nav__group">
+                        <a href="#" class="header-nav__link header-nav__link--brand-name">BrandName</a>
+                        <ul class="header-nav__list header-nav__list--primary js-header-nav-list">
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">Home</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">Product</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">Pricing</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">Contact</a>
+                            </li>
+                        </ul>
+                        <button class="header__burger btn btn--primary">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                    <ul class="header-nav__list header-nav__list--secondary js-header-nav-list">
                         <li class="header-nav__item">
                             <a href="#" class="header-nav__link">Login</a>
-                        </li>
+
+                        <a class="header-nav-mobile__link"></a></li>
                         <li class="header-nav__item">
                             <a href="#" class="header__btn btn btn--primary">
                                 <span>JOIN US</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
-                        </li>
+
+                        <a class="header-nav-mobile__link"></a></li>
                     </ul>
                 </nav>
+                <nav id="js-header-mobile" class="header-nav-mobile"></nav>
             </div>
         </div>
     </header>
