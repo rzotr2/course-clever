@@ -1,0 +1,36 @@
+.header-nav-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: $main-color;
+  transition: top .5s linear;
+
+  &__list {
+    text-align: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    color: $white-color;
+  }
+
+  &.shown {
+    top: 0;
+  }
+
+  @include mobile-screen {
+    display: flex;
+  }
+}
+

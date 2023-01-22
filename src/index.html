@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/index.css">
-    <script src="src/js/index.js"></script>
+    <script defer src="src/js/index.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <nav id="js-header-nav" class="header-nav">
-                    <div id="js-header-nav-group" class="header-nav__group">
+                <nav class="header-nav">
+                    <div class="header-nav__group">
                         <a href="#" class="header-nav__link header-nav__link--brand-name">BrandName</a>
-                        <ul class="header-nav__list header-nav__list--primary js-header-nav-list">
+                        <ul class="header-nav__list header-nav__list--primary">
                             <li class="header-nav__item">
                                 <a href="#" class="header-nav__link">Home</a>
                             </li>
@@ -30,27 +30,46 @@
                                 <a href="#" class="header-nav__link">Contact</a>
                             </li>
                         </ul>
-                        <button class="header__burger btn btn--primary">
+                        <button id="js-header-toggle" class="header__burger btn btn--primary">
                             <i class="bi bi-list"></i>
                         </button>
                     </div>
                     <ul class="header-nav__list header-nav__list--secondary js-header-nav-list">
                         <li class="header-nav__item">
                             <a href="#" class="header-nav__link">Login</a>
-
-                        <a class="header-nav-mobile__link"></a></li>
+                        </li>
                         <li class="header-nav__item">
                             <a href="#" class="header__btn btn btn--primary">
                                 <span>JOIN US</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
-
-                        <a class="header-nav-mobile__link"></a></li>
+                        </li>
                     </ul>
                 </nav>
-                <nav id="js-header-mobile" class="header-nav-mobile"></nav>
             </div>
         </div>
+        <nav id="js-header-mobile-nav" class="header-nav-mobile">
+            <ul class="header-nav-mobile__list">
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Home</a>
+                </li>
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Product</a>
+                </li>
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Pricing</a>
+                </li>
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Contact</a>
+                </li>
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Login</a>
+                </li>
+                <li class="header-nav-mobile__item">
+                    <a href="#" class="header-nav-mobile__link">Join us</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 </body>
 </html>
