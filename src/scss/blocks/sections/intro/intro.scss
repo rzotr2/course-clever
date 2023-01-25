@@ -1,0 +1,32 @@
+.intro-section {
+  background-color: $backgorund-color;
+}
+
+.intro-row {
+  display: flex;
+  align-items: center;
+
+}
+
+.intro-column {
+  > :not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .intro-btn-container__btn-primary {
+    margin-right: 10px;
+  }
+}
+
+.intro-image {
+  width: 50%;
+}
+
+@include mobile-screen {
+  .intro-row {
+    flex-wrap: wrap;
+  }
+  .intro-image {
+    display: none;
+  }
+}
