@@ -1,0 +1,64 @@
+.packages-section {
+  background-color: $backgorund-color;
+  .container {
+    margin: 110px auto;
+  }
+}
+
+.packages-description {
+  margin-bottom: 70px;
+}
+
+.packages-text-description {
+  &__subtitle {
+    font-size: 0.875rem;
+  }
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+  }
+}
+
+.packages-columns {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    >:nth-child(even) {
+      margin-top: 50px;
+      margin-bottom: 110px;
+    }
+    >:nth-child(odd) {
+      margin-bottom: 160px;
+    }
+  }
+}
+
+.packages-columns__column {
+  width: 200px;
+
+  background-color: $white-color;
+  box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+}
+
+.packages-column-items {
+  padding: 2.5em 2.85em;
+  > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__icon {
+    display: inline-block;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: $column_text;
+  }
+}
+
+
+
