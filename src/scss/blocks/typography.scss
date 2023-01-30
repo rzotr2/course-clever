@@ -2,7 +2,6 @@
   font-size: 3.625rem;
   font-weight: 700;
   line-height: 80px;
-  letter-spacing: 0.2px;
   color: $white-color;
 }
 
@@ -10,13 +9,18 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 0.1px;
   color: $main-color;
 }
 
 .text {
   font-size: 1.25rem;
   line-height: 30px;
-  letter-spacing: 0.2px;
   color: $white-color;
+}
+
+.column__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $backgorund-color;
 }
